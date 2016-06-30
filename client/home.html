@@ -1,0 +1,46 @@
+<template name="home">
+  <div class="container">
+    <div class="col-sm-6 col-sm-offset-3">
+      <div class="input-group">
+        <input class="form-control" placeholder="Search for..." type="text" id="search-input">
+          <span class="input-group-btn">
+            <button class="btn btn-default btn-search-yt btn-danger" type="button">Go!</button>
+          </span>
+        </div>
+    </div>
+    <br>
+    <br>
+
+    <div class="col-sm-12 col-md-4">
+      {{#each searchResults}}
+      <div class="col-sm-6">
+        <a href="#/" class="thumbnail" data-video-id="{{id.videoId}}">
+          <img  src="{{snippet.thumbnails.medium.url}}" >
+        </a>
+        <h6p class="">{{snippet.title}}</h6p>
+      </div>
+      {{/each}}
+    </div>
+
+    <div class="col-sm-12 col-md-8">
+      <ul class="timeline">
+      {{#each songsList}}
+        <li class="event {{playing(this)}}">
+          <div class="left-arrow"></div>
+          <div class="time">{{index}}</div>
+          <a href="#">{{user}}</a>
+          <div class="actions pull-right">
+            <i class="fa {{upvotedClass}}"></i><span>{{votes}}</span>&nbsp;
+          </div>
+            <div class="pull-left image">
+            <img class="events-object img-rounded" src="http://bootflat.github.io/img/photo-1.jpg">
+          </div>
+          <div class="derecha">
+            <h4>&nbsp;{{name}}</h4>
+          </div>
+        </li>
+      {{/each}}
+       </ul>
+    </div>
+  </div>
+</template>

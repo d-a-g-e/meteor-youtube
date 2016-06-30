@@ -1,0 +1,110 @@
+
+
+.actions{
+  span{
+    font-size: 1.5em
+  }
+  i{
+    font-size: 1.5em;
+    &:hover{color: #C9302C;}
+  }
+  i.fa-heart{color: #C9302C;}
+}
+
+.playing{
+  background-color: #D9EDF6 !important;
+  .left-arrow{
+    &:after {
+      border-right: 15px solid #D9EDF6 !important;
+      border-left: 0 solid #D9EDF6 !important;
+    }
+  }
+}
+
+
+$bgColor: #f0f0f0;
+$timelineColor: #C9302C;
+
+ /*Generic body stuff*/
+body { background: $bgColor; font-family: sans-serif; padding-top: 30px; }
+
+ul.timeline {
+  position: relative;
+  list-style-type: none;
+  padding-left: 90px;
+  &:before {
+    position: absolute;
+    display: block;
+    left: 46px;
+    width: 4px;
+    height: 100%;
+    border-radius: 2px;
+    background-color: $timelineColor;
+    content: ' ';
+  }
+  .event {
+    a{margin-left: 7px}
+    position: relative;
+    padding: 8px 8px 16px 8px;
+    background: white;
+    border-radius: 2px;
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,.2),0 1px 1px 0 rgba(0,0,0,.14),0 2px 1px -1px rgba(0,0,0,.12);
+    margin-bottom: 30px;
+    &:before {
+      display: block;
+      position: absolute;
+      top: 30px;
+      left: -55px;
+      width: 30px;
+      height: 30px;
+      border: 4px solid $timelineColor;
+      border-radius: 50%;
+      background-color: white;
+      box-shadow: 0 0 4px -1px rgba(0,0,0,0.6);
+      content: ' ';
+    }
+  }
+  h3 {
+    font-size: 1.5em;
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+  .time {
+    position: absolute;
+    display: block;
+    width: 120px;
+    top: 35px;
+    left: -179px;
+    font-size: 1.3em;
+    text-align: right;
+    font-weight: 600;
+    /*text-transform: uppercase;*/
+    >.glyphicon-time {
+      top: 2px;
+    }
+  }
+  .left-arrow {
+     &:before {
+      position: absolute;
+      top: 30px;
+      left: -15px;
+      display: inline-block;
+      border-top: 15px solid transparent;
+      border-right: 15px solid #ddd;
+      border-left: 0 solid #ddd;
+      border-bottom: 15px solid transparent;
+      content: ' ';
+    }
+    &:after {
+      position: absolute;
+      top: 30px;
+      left: -14px;
+      display: inline-block;
+      border-top: 15px solid transparent;
+      border-right: 15px solid #fff;
+      border-left: 0 solid #fff;
+      border-bottom: 15px solid transparent;
+      content: ' ';
+    }
+  }
+}
